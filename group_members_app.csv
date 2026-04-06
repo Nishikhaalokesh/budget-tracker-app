@@ -1,0 +1,3 @@
+member_id,member_name,currency,role
+1,Person 1,USD,primary
+2,Person 2,INR,partner

@@ -1,0 +1,121 @@
+date,category,amount_usd,currency,description,month_label
+2024-10-01,Healthcare,70.3,GBP,Healthcare expense,October 2024
+2024-10-04,Dining Out,63.94,USD,Dining Out expense,October 2024
+2024-10-04,Entertainment,72.2,INR,Entertainment expense,October 2024
+2024-10-05,Healthcare,28.33,USD,Healthcare expense,October 2024
+2024-10-05,Savings,100.71,USD,Savings expense,October 2024
+2024-10-07,Dining Out,71.55,INR,Dining Out expense,October 2024
+2024-10-10,Remittance,246.79,USD,Remittance expense,October 2024
+2024-10-14,Rent,846.09,USD,Rent expense,October 2024
+2024-10-15,Subscriptions,36.21,USD,Subscriptions expense,October 2024
+2024-10-15,Dining Out,67.02,USD,Dining Out expense,October 2024
+2024-10-17,Rent,891.92,CNY,Rent expense,October 2024
+2024-10-17,Savings,115.3,USD,Savings expense,October 2024
+2024-10-18,Clothing,38.58,GBP,Clothing expense,October 2024
+2024-10-18,Transport,67.86,GBP,Transport expense,October 2024
+2024-10-20,Groceries,117.62,INR,Groceries expense,October 2024
+2024-10-24,Savings,99.14,USD,Savings expense,October 2024
+2024-10-25,Rent,917.92,USD,Rent expense,October 2024
+2024-10-25,Rent,947.35,USD,Rent expense,October 2024
+2024-10-26,Remittance,225.12,INR,Remittance expense,October 2024
+2024-10-26,Clothing,69.42,GBP,Clothing expense,October 2024
+2024-11-02,Remittance,184.09,CNY,Remittance expense,November 2024
+2024-11-02,Rent,903.91,GBP,Rent expense,November 2024
+2024-11-04,Remittance,205.59,CNY,Remittance expense,November 2024
+2024-11-05,Dining Out,52.3,CNY,Dining Out expense,November 2024
+2024-11-10,Clothing,114.62,USD,Clothing expense,November 2024
+2024-11-10,Savings,113.83,CNY,Savings expense,November 2024
+2024-11-10,Groceries,53.01,USD,Groceries expense,November 2024
+2024-11-13,Remittance,226.91,GBP,Remittance expense,November 2024
+2024-11-14,Healthcare,18.91,USD,Healthcare expense,November 2024
+2024-11-16,Rent,834.49,USD,Rent expense,November 2024
+2024-11-17,Groceries,103.11,USD,Groceries expense,November 2024
+2024-11-17,Remittance,213.5,USD,Remittance expense,November 2024
+2024-11-18,Rent,874.55,USD,Rent expense,November 2024
+2024-11-18,Groceries,106.61,GBP,Groceries expense,November 2024
+2024-11-19,Rent,878.64,USD,Rent expense,November 2024
+2024-11-19,Subscriptions,30.61,CNY,Subscriptions expense,November 2024
+2024-11-19,Dining Out,60.93,USD,Dining Out expense,November 2024
+2024-11-20,Rent,944.1,USD,Rent expense,November 2024
+2024-11-23,Clothing,30.25,USD,Clothing expense,November 2024
+2024-11-26,Groceries,123.56,CNY,Groceries expense,November 2024
+2024-12-01,Subscriptions,26.64,USD,Subscriptions expense,December 2024
+2024-12-01,Entertainment,62.58,USD,Entertainment expense,December 2024
+2024-12-03,Dining Out,31.48,USD,Dining Out expense,December 2024
+2024-12-04,Transport,78.43,USD,Transport expense,December 2024
+2024-12-06,Dining Out,65.55,INR,Dining Out expense,December 2024
+2024-12-06,Dining Out,49.42,USD,Dining Out expense,December 2024
+2024-12-08,Rent,826.52,USD,Rent expense,December 2024
+2024-12-09,Savings,112.93,USD,Savings expense,December 2024
+2024-12-09,Savings,100.06,USD,Savings expense,December 2024
+2024-12-11,Entertainment,40.18,CNY,Entertainment expense,December 2024
+2024-12-14,Rent,899.44,USD,Rent expense,December 2024
+2024-12-15,Transport,93.82,GBP,Transport expense,December 2024
+2024-12-15,Dining Out,43.17,USD,Dining Out expense,December 2024
+2024-12-19,Subscriptions,22.16,USD,Subscriptions expense,December 2024
+2024-12-20,Entertainment,55.29,GBP,Entertainment expense,December 2024
+2024-12-24,Clothing,71.34,USD,Clothing expense,December 2024
+2024-12-25,Rent,913.48,USD,Rent expense,December 2024
+2024-12-26,Dining Out,50.94,USD,Dining Out expense,December 2024
+2024-12-28,Entertainment,54.1,USD,Entertainment expense,December 2024
+2024-12-28,Rent,945.74,INR,Rent expense,December 2024
+2025-01-01,Groceries,105.12,USD,Groceries expense,January 2025
+2025-01-01,Rent,913.75,INR,Rent expense,January 2025
+2025-01-02,Subscriptions,24.66,INR,Subscriptions expense,January 2025
+2025-01-05,Savings,108.77,CNY,Savings expense,January 2025
+2025-01-05,Dining Out,78.5,CNY,Dining Out expense,January 2025
+2025-01-06,Rent,877.03,USD,Rent expense,January 2025
+2025-01-07,Dining Out,57.02,GBP,Dining Out expense,January 2025
+2025-01-08,Groceries,111.22,USD,Groceries expense,January 2025
+2025-01-11,Remittance,217.82,INR,Remittance expense,January 2025
+2025-01-11,Remittance,295.91,INR,Remittance expense,January 2025
+2025-01-15,Rent,922.77,USD,Rent expense,January 2025
+2025-01-17,Remittance,269.71,USD,Remittance expense,January 2025
+2025-01-17,Healthcare,5.6,USD,Healthcare expense,January 2025
+2025-01-17,Groceries,148.2,INR,Groceries expense,January 2025
+2025-01-20,Dining Out,69.42,USD,Dining Out expense,January 2025
+2025-01-23,Groceries,130.4,GBP,Groceries expense,January 2025
+2025-01-24,Dining Out,42.04,GBP,Dining Out expense,January 2025
+2025-01-26,Subscriptions,27.45,INR,Subscriptions expense,January 2025
+2025-01-27,Healthcare,12.89,USD,Healthcare expense,January 2025
+2025-01-27,Subscriptions,32.15,CNY,Subscriptions expense,January 2025
+2025-02-01,Rent,855.59,CNY,Rent expense,February 2025
+2025-02-04,Groceries,98.72,CNY,Groceries expense,February 2025
+2025-02-04,Rent,841.61,USD,Rent expense,February 2025
+2025-02-07,Groceries,87.73,USD,Groceries expense,February 2025
+2025-02-07,Savings,84.1,GBP,Savings expense,February 2025
+2025-02-08,Savings,82.02,USD,Savings expense,February 2025
+2025-02-09,Groceries,148.38,GBP,Groceries expense,February 2025
+2025-02-13,Subscriptions,25.78,INR,Subscriptions expense,February 2025
+2025-02-15,Rent,842.39,USD,Rent expense,February 2025
+2025-02-15,Rent,941.75,GBP,Rent expense,February 2025
+2025-02-15,Groceries,112.18,CNY,Groceries expense,February 2025
+2025-02-16,Rent,960.46,USD,Rent expense,February 2025
+2025-02-17,Remittance,189.97,INR,Remittance expense,February 2025
+2025-02-19,Savings,63.16,CNY,Savings expense,February 2025
+2025-02-20,Entertainment,50.62,USD,Entertainment expense,February 2025
+2025-02-20,Transport,50.72,USD,Transport expense,February 2025
+2025-02-23,Subscriptions,33.35,USD,Subscriptions expense,February 2025
+2025-02-26,Rent,854.28,USD,Rent expense,February 2025
+2025-02-26,Savings,119.03,CNY,Savings expense,February 2025
+2025-02-27,Clothing,83.18,INR,Clothing expense,February 2025
+2025-03-01,Groceries,105.07,USD,Groceries expense,March 2025
+2025-03-02,Entertainment,51.12,USD,Entertainment expense,March 2025
+2025-03-03,Remittance,174.71,GBP,Remittance expense,March 2025
+2025-03-03,Savings,101.1,GBP,Savings expense,March 2025
+2025-03-04,Groceries,95.47,INR,Groceries expense,March 2025
+2025-03-04,Dining Out,65.86,USD,Dining Out expense,March 2025
+2025-03-04,Entertainment,57.63,GBP,Entertainment expense,March 2025
+2025-03-08,Remittance,199.14,USD,Remittance expense,March 2025
+2025-03-10,Groceries,71.42,USD,Groceries expense,March 2025
+2025-03-10,Transport,95.98,USD,Transport expense,March 2025
+2025-03-17,Groceries,128.82,INR,Groceries expense,March 2025
+2025-03-18,Remittance,208.69,USD,Remittance expense,March 2025
+2025-03-18,Groceries,164.83,USD,Groceries expense,March 2025
+2025-03-19,Healthcare,68.13,GBP,Healthcare expense,March 2025
+2025-03-19,Entertainment,43.87,USD,Entertainment expense,March 2025
+2025-03-20,Rent,939.48,CNY,Rent expense,March 2025
+2025-03-20,Transport,75.83,USD,Transport expense,March 2025
+2025-03-21,Dining Out,69.59,GBP,Dining Out expense,March 2025
+2025-03-24,Healthcare,33.72,USD,Healthcare expense,March 2025
+2025-03-28,Subscriptions,26.92,USD,Subscriptions expense,March 2025

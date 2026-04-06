@@ -1,0 +1,4 @@
+date,description,total_amount,currency,paid_by,split_type
+2025-03-01,Dinner out,120,USD,Person 1,equal
+2025-03-05,Groceries,85,USD,Person 2,equal
+2025-03-10,Utility bill,60,USD,Person 1,equal
