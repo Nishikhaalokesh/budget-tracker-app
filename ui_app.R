@@ -51,6 +51,18 @@ ui <- dashboardPage(
             radioButtons("setup_mode","Who is this for?",
               c("Just me"="individual","Me + partner/roommates"="group"),
               "individual")
+            ,conditionalPanel(
+              condition = "input.setup_mode == 'group'",
+              hr(),
+              tags$p(tags$b("Group Setup"), style="margin-top:10px;"),
+              actionButton("btn_create_group","Create New Group",class="btn-info btn-block"),
+              br(),br(),
+              textInput("join_code","Or enter invite code to join existing group",
+                placeholder="e.g. ABCD1234"),
+              actionButton("btn_join_group","Join Group",class="btn-warning btn-block"),
+              br(),
+              uiOutput("group_status")
+            )
           ),
           box(title="Step 2 — Set Minimum Savings",width=6,status="success",solidHeader=TRUE,
             p("The app will always protect this amount every month."),
@@ -180,4 +192,87 @@ ui <- dashboardPage(
       )
     )
   )
+)
+
+
+
+
+con <- file("app/server_app.R", "a")
+writeLines('', con)
+writeLines('  # Group creation and joining', con)
+writeLines('  observeEvent(input$btn_create_group,{', con)
+writeLines('    req(auth$token, auth$user_id)', con)
+writeLines('    group_name <- if(!is.null(input$setup_name) && input$setup_name!="") input$setup_name else "My Group"', con)
+writeLines('    result <- supabase_create_group_app(auth$token, auth$user_id, paste0(group_name,"s Group"))', con)
+writeLines('    if(result$success){', con)
+writeLines('      output$group_status <- renderUI(', con)
+writeLines('        div(style="background:#ccffcc;padding:10px;border-radius:6px;margin-top:10px;",', con)
+writeLines('          tags$p(tags$b("Group created!")),', con)
+writeLines('          tags$p("Share this invite code with your roommates/partner:"),', con)
+writeLines('          tags$h3(style="color:#0066cc;letter-spacing:3px;",result$invite_code),', con)
+writeLines('          tags$p(style="color:#666;font-size:12px;","They can enter this code in their Setup Profile to join your group.")))', con)
+writeLines('    } else {', con)
+writeLines('      output$group_status <- renderUI(', con)
+writeLines('        div(style="background:#ffcccc;padding:10px;border-radius:6px;margin-top:10px;",', con)
+writeLines('          "Failed to create group. Please try again."))', con)
+writeLines('    }', con)
+writeLines('  })', con)
+writeLines('', con)
+writeLines('  observeEvent(input$btn_join_group,{', con)
+writeLines('    req(auth$token, auth$user_id, input$join_code)', con)
+writeLines('    result <- supabase_join_group_app(auth$token, auth$user_id, trimws(input$join_code))', con)
+writeLines('    if(result$success){', con)
+writeLines('      output$group_status <- renderUI(', con)
+writeLines('        div(style="background:#ccffcc;padding:10px;border-radius:6px;margin-top:10px;",', con)
+writeLines('          paste0("Successfully joined group: ", result$group_name, "!")))', con)
+writeLines('    } else {', con)
+writeLines('      output$group_status <- renderUI(', con)
+writeLines('        div(style="background:#ffcccc;padding:10px;border-radius:6px;margin-top:10px;",', con)
+writeLines('          paste0("Error: ", result$message)))', con)
+writeLines('    }', con)
+writeLines('  })', con)
+writeLines('}', con)
+close(con)
+message("✅ Group server logic added! Lines: ", readLines("app/server_app.R") |> length())
+
+
+
+readLines("app/server_app.R")[294:300]
+lines <- readLines("app/server_app.R")
+lines[297] <- ''
+writeLines(lines, "app/server_app.R")
+message("✅ Fixed!")
+source("R/functions_app.R")
+source("R/supabase_app.R")
+server <- source("app/server_app.R", local=TRUE)$value
+message("server OK")
+
+library(shiny)
+library(shinydashboard)
+library(shinyWidgets)
+library(plotly)
+library(DT)
+ui     <- source("app/ui_app.R", local=TRUE)$value
+shinyApp(ui=ui, server=server)
+
+
+
+rsconnect::deployApp(
+  appDir  = ".",
+  appFiles = c(
+    "app.R",
+    "app/ui_app.R",
+    "app/server_app.R",
+    "R/functions_app.R",
+    "R/supabase_app.R",
+    "data/transactions_app.csv",
+    "data/budgets_app.csv",
+    "data/goals_app.csv",
+    "data/group_members_app.csv",
+    "data/group_expenses_app.csv",
+    "data/profile_app.csv",
+    "data/user_categories_app.csv"
+  ),
+  appName = "budget-tracker-app",
+  account = "budgettrackerappnl"
 )

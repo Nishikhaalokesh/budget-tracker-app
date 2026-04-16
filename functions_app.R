@@ -119,23 +119,23 @@ fallback_rates_app <- list(
 )
 
 convert_to_usd_app <- function(amount, from_currency) {
-  tryCatch({
-    url      <- paste0("https://api.exchangerate.host/latest?base=",
-                       from_currency, "&symbols=USD")
-    response <- GET(url, timeout(5))
-    if (status_code(response) == 200) {
-      data <- fromJSON(rawToChar(response$content))
-      rate <- data$rates$USD
-      return(round(amount * rate, 2))
-    } else {
-      stop("API unavailable")
-    }
-  }, error = function(e) {
-    rate <- fallback_rates_app[[from_currency]]
-    if (is.null(rate)) rate <- 1
-    return(round(amount * rate, 2))
-  })
+  rate <- fallback_rates_app[[from_currency]]
+  if(is.null(rate)) rate <- 1
+  return(round(as.numeric(amount) * rate, 2))
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 convert_from_usd_app <- function(amount_usd, to_currency) {
   rate <- fallback_rates_app[[to_currency]]
@@ -285,12 +285,12 @@ split_expense_app <- function(description,
                               split_type    = "equal",
                               custom_splits = NULL) {
   n         <- length(members)
-  total_usd <- convert_to_usd_app(total_amount, currency)
+  total_usd <- tryCatch(as.numeric(convert_to_usd_app(total_amount, currency)[1]), error=function(e) as.numeric(total_amount))
   
   splits <- if (split_type == "equal") {
     tibble(
       member     = members,
-      owes_usd   = round(total_usd / n, 2),
+      owes_usd   = rep(round(total_usd / n, 2), n),
       owes_local = map_dbl(owes_usd,
                            ~convert_from_usd_app(.x, currency))
     )
